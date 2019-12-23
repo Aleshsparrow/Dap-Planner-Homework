@@ -30,5 +30,5 @@ I also color coded the time-blocks such that the time block for a particular tas
 * Github repo link: https://github.com/Aleshsparrow
 
 ## Acknowledgement
-* Jquerry
+* JQuerry
 * Moment.js

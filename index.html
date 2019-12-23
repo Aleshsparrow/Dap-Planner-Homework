@@ -136,25 +136,42 @@
     
     <script>
         var data = moment();
-        var saveLocal = localStorage.getItem("input")
+        
     // console.log(data);
         var currentDay = $("#currentDay")
         $(currentDay).text(data._d)
         // console.log(data._d)
 
-        function saveUserInput(){
-            event.preventDefault()
-            var getInput = $("textarea").val()
-            // console.log(getInput)
-        }
-            localStorage.getItem("input", getInput)
-        $("button").on("click", saveUserInput);{
-           }
+        // function saveUserInput(){
+        //     event.preventDefault()
+        //     console.log(getInput)
+        //     $(document).ready(function(){
 
-        function storeInput(){
-            var saveLocal = JSON.parse(localStorage.setItem("input"));
-        }
-        storeInput()
+        //     })       
+            
+        // }
+            
+        // $("button").on("click", saveUserInput);{
+        //    }
+            
+            var getInput = $("textarea").val()
+        $(document).ready(function(){
+            $("button").click(function(){
+                console.log("click")
+                if($("textarea").val() !== ""){
+                    localStorage.setItem("Task", $("textarea").val())
+                    alert("Task saved")
+                }
+                else{
+                    alert("You can not leave field blank!")
+                }
+            })
+            })       
+
+        // function storeInput(){
+            
+        // }
+        
         // function timeRef(){
         //     var time = $(".hour").val()
             
